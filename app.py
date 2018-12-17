@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 
 
-@app.route('/kion')
+@app.route('/')
 def get_kion():
     h, t = DHT.read_retry(SENSOR_TYPE, DHT_GPIO)
     notifer.output(f'現在の部屋の気温は{t:.3g} 度です。')
